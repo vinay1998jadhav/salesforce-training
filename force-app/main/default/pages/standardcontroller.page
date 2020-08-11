@@ -1,0 +1,21 @@
+<apex:page standardController="candiate__c">
+    <apex:form >
+    <apex:pageBlock >
+    <apex:pageBlockSection >
+       
+                <apex:inputField value="{!candiate__c.first_name__c}"/> 
+        <apex:inputField value="{!candiate__c.last_name__c}"/> 
+        <apex:inputField value="{!candiate__c.job__c}"/> 
+        <apex:inputField value="{!candiate__c.email__c}"/> 
+
+        </apex:pageBlockSection>
+       
+        <apex:pageBlockButtons >
+        <apex:commandButton value="save" action="{! save}" />
+                    <apex:commandButton value="edit" action="{! edit}" />
+        <apex:commandButton value="delete" action="{! delete}" />
+
+        </apex:pageBlockButtons>
+         </apex:pageBlock>
+    </apex:form>
+</apex:page>

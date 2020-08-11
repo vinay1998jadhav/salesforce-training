@@ -1,0 +1,25 @@
+.logo{
+    margin-left:350px;
+}
+.jobname{
+margin:10px; 
+}
+.jobtype{
+margin:10px;
+}
+.header{
+font-size:20px;
+color:blue;
+}
+.manager{margin:10px;
+}
+
+.desc{margin:10px;
+height:20px;}
+
+.num{margin:10px;}
+
+.exp{margin:10px;}
+
+#pb{
+font-size:15px;}

@@ -1,0 +1,30 @@
+<apex:page Controller="classforjob">
+    <apex:stylesheet value="{!$Resource.jobcss}"/>
+    <apex:includeScript value="{!$Resource.jobjs}"/>
+    <apex:image styleClass="logo" url="{!$Resource.logo}" width="250px" />
+   
+    
+  <apex:form id="form1" >
+      <h1 class="header">
+          Job Application
+      </h1> 
+      
+
+  <apex:pageBlock id="pb" >
+  <apex:pageBlockSection id="pbs">
+      
+ <apex:inputField id="nam" value="{!obj.name}" />
+ <apex:inputField id="manager" value="{!obj.manager__c}"/>
+      <apex:inputField id="jobtype" value="{!obj.job_type__c}"/> <br />
+ <apex:inputField id="desc" value="{!obj.description__c}"/> <br />
+ <apex:inputField id="num" value="{!obj.number_of_position__c}"/> <br />
+       <apex:inputField id="exp" value="{!obj.expiry__c}"/>
+</apex:pageBlockSection>
+    <apex:pageBlockButtons >
+      
+      <apex:commandButton onclick="check('{!$Component.form1.pb.pbs.nam }','{!$Component.form1.pb.pbs.manager }','{!$Component.form1.pb.pbs.jobtype }','{!$Component.form1.pb.pbs.desc }','{!$Component.form1.pb.pbs.num }','{!$Component.form1.pb.pbs.exp }');"  value="save&next" styleClass="btnclass" />
+        <apex:actionFunction action="{!saveme}" name="saveme" reRender="none" />
+      </apex:pageBlockButtons>
+  </apex:pageBlock>
+  </apex:form>
+</apex:page>
